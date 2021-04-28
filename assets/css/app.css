@@ -1,0 +1,9 @@
+@import "vendor/tailwind/base.css";
+/* add custom base styles here */
+@import "theme/fonts.css";
+@import "vendor/tailwind/components.css";
+/* add custom component styles here */
+@import "vendor/tailwind/utilities.css";
+/* add custom utlilies styles here */
+
+@import "pages/home.css";

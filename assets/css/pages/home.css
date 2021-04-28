@@ -1,0 +1,17 @@
+/* 
+This file is where you would define the classes that you want for the home page. You 
+can take advantage of tailwind css utility classes by using the keyword '@apply' followed
+by the utility name of the style that you want to apply.
+*/
+
+.btn-red {
+  @apply text-white bg-red-500;
+}
+
+.btn-red:hover {
+  @apply bg-red-400;
+}
+
+.btn {
+  @apply px-4 py-2 rounded appearance-none;
+}
