@@ -44,6 +44,9 @@
 /* 0 */
 /***/ (function(module, exports) {
 
+	const hamburgerBtn = document.getElementById("hamburgerBtn");
+	
+	hamburgerBtn.onclick(function () {});
 
 
 /***/ })

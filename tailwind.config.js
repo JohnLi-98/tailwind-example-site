@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: {
     content: ["**/*.html", "**/*.php", "assets/js/**/*.js"],
@@ -7,6 +9,10 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
+    },
+    screens: {
+      xs: "420px",
+      ...defaultTheme.screens,
     },
     extend: {
       height: {
@@ -34,5 +40,31 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    ({ addComponents }) => {
+      addComponents({
+        ".container": {
+          maxWidth: "100%",
+          "@screen xs": {
+            maxWidth: "100%",
+          },
+          "@screen sm": {
+            maxWidth: "640px",
+          },
+          "@screen md": {
+            maxWidth: "768px",
+          },
+          "@screen lg": {
+            maxWidth: "1024px",
+          },
+          "@screen xl": {
+            maxWidth: "1280px",
+          },
+          "@screen 2xl": {
+            maxWidth: "1480px",
+          },
+        },
+      });
+    },
+  ],
 };

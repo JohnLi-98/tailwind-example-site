@@ -10,7 +10,17 @@
     <script src="build/app.js"></script>
   </head>
   <body class="bg-gray-100">
-    <header class="py-3 m-3">
+    <header class="absolute top-0 left-0 right-0 w-full py-3 lg:m-3">
+      <div id="tw-debug" class="inline-block px-3 py-2 text-white bg-red-500">
+        <span class="hidden 2xl:block">2XL</span>
+        <span class="hidden xl:block 2xl:hidden">XL</span>
+        <span class="hidden lg:block xl:hidden">LG</span>
+        <span class="hidden md:block lg:hidden">MD</span>
+        <span class="hidden sm:block md:hidden">SM</span>
+        <span class="hidden xs:block sm:hidden">XS</span>
+        <span class="block xs:hidden">REMAINDER</span>
+      </div>
+
       <div class="container flex items-center justify-between">
         <!-- Logo -->
         <div>
@@ -67,30 +77,33 @@
           </svg>
         </div>
 
-        <nav>
-          <ul>
-            <li><a href="#">Platforms</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+        <nav class="hidden lg:block">
+          <ul class="flex justify-center font-sans text-sm font-medium">
+            <li class="px-4"><a href="#">Platforms</a></li>
+            <li class="px-4"><a href="#">Pricing</a></li>
+            <li class="px-4"><a href="#">Solutions</a></li>
+            <li class="px-4"><a href="#">How it works</a></li>
+            <li class="px-4"><a href="#">Knowledge</a></li>
           </ul>
         </nav>
 
         <!-- Buttons -->
         <div class="flex flex-grow-0">
           <button
-            class="self-start font-sans text-sm font-normal bg-yellow-500 btn btn-sm hover:text-white"
+            class="self-start font-sans text-sm font-medium bg-yellow-500 lg:border-solid lg:border-2 lg:border-yellow-500 lg:bg-gray-100 btn btn-sm hover:text-white"
           >
             Login
           </button>
           <button
-            class="self-start ml-1 bg-yellow-500 btn btn-lg hover:text-white"
+            class="self-start ml-1 font-sans text-sm font-medium bg-yellow-500 xs:hidden lg:block btn btn-lg hover:text-white"
           >
             Sign-up
           </button>
           <!-- Hamburger -->
-          <div class="flex flex-col justify-center ml-4 md:hidden">
+          <div
+            class="flex flex-col justify-center ml-4 lg:hidden"
+            id="hamburgerBtn"
+          >
             <span class="inline-block w-8 h-0.75 bg-black my-0.5"></span>
             <span class="inline-block w-8 h-0.75 bg-black my-0.5"></span>
             <span class="inline-block w-8 h-0.75 bg-black my-0.5"></span>
@@ -98,9 +111,199 @@
         </div>
       </div>
     </header>
+    <section class="pt-52 hero">
+      <div
+        class="container flex flex-col items-center justify-between pb-8 md:flex-row xl:px-32 sm:pb-28"
+      >
+        <div class="flex-col lg:flex content">
+          <span>FULLY MANAGED</span>
+          <h1
+            class="pt-4 pb-8 text-2xl font-semibold tracking-wider lg:text-4xl"
+          >
+            Amazingly fast hosting
+          </h1>
+          <p class="tracking-wide">
+            Servebolt is next level high performance managed hosting with a
+            strong focus on scalability and security.
+          </p>
+          <p class="py-3 tracking-wide">
+            Migrate to Servebolt, or just try it for free, and experience
+            loading speeds you have never seen before.
+          </p>
+          <div class="flex flex-col items-start pt-8 lg:flex-row button-group">
+            <a href="#" class="font-medium btn btn-primary">
+              Why is Servebolt faster?
+            </a>
+            <a href="#" class="btn btn-textonly"> Why performance matters </a>
+          </div>
+        </div>
 
-    <section class="bg-gray-400">
-      <div class="container">Test text</div>
+        <div class="flex-col items-start p-16 bg-white lg:flex trial">
+          <h4 class="text-2xl tracking-wide">
+            Test our hosting yourself, for free
+          </h4>
+          <ul class="py-10 list-outside check">
+            <li>100% managed hosting</li>
+            <li>Extremely fast & lightweight</li>
+            <li>Experts on support</li>
+            <li>Free migrations</li>
+            <li>Powerful features</li>
+          </ul>
+          <a href="#" class="flex flex-shrink-0 font-medium btn btn-primary"
+            >Start free trial</a
+          >
+        </div>
+      </div>
     </section>
+
+    <section class="bg-white billboard">
+      <div class="container flex flex-col py-8 xl:px-32 sm:py-28">
+        <img
+          class="illustration-full"
+          alt=""
+          src="https://servebolt.com/cdn-cgi/image/quality=60,format=auto,onerror=redirect,width=/content/uploads/2019/02/dont_bring_a_truck_to_a_dragrace.svg"
+        />
+        <h1 class="pt-8 pb-8 text-2xl font-semibold tracking-wider md:text-4xl">
+          Blazingly fast hosting without complexity
+        </h1>
+        <p class="text-xl md:text-3xl">Modern, slimmed down and tuned</p>
+        <p class="pt-6">
+          While others try to add more componenets to their hosting to make it
+          go faster, we decided to build our hosting cloud fast from the ground
+          up. We did so by stripping out everything we knew was deadweight.
+        </p>
+        <p class="pt-6">
+          Our hosting is amazingly fast. without the use of complicated HTML
+          caching strategies, cache in memory and so on. Instead, our platform
+          makes sure both cached and uncached requests are immediate.
+        </p>
+        <p class="pt-6 font-medium">
+          And of course, this applies to the back-end as well.
+        </p>
+      </div>
+    </section>
+
+    <section class="special">
+      <div class="container flex flex-col items-center py-8 xl:px-32 sm:py-28">
+        <h1 class="pb-10 text-xl">No matter the number of</h1>
+        <span>
+          <img
+            id="scale-icon"
+            alt="Scaling-illustration icon"
+            src="https://servebolt.com/content/themes/servebolt-public/images/built-to-scale/client.svg"
+          />
+          <p class="pt-4 text-2xl font-semibold">visitors</p>
+        </span>
+        <h2 class="pt-10 text-xl">Bolts can handle it.</h2>
+      </div>
+    </section>
+
+    <section
+      class="text-white billboard bg-gradient-to-bl from-blue-700 to-blue-500"
+    >
+      <div class="container flex flex-col py-8 xl:px-32 sm:py-28">
+        <img
+          class="illustration-small"
+          alt=""
+          src="https://servebolt.com/cdn-cgi/image/quality=60,format=auto,onerror=redirect,width=/content/uploads/2021/03/acd-logomark-color.svg"
+        />
+        <h1 class="pt-8 text-2xl font-semibold tracking-wider md:text-4xl">
+          Accelerated Domains
+        </h1>
+        <h2 class="pt-8 text-xl md:text-3xl">
+          A new service that accelerates your domain
+        </h2>
+        <p class="pt-6">
+          Improve the performance of your site even further by adding the
+          <a href="#" class="underline">Accelerated Domains</a>.
+        </p>
+        <p class="pt-6">
+          It's an easy set-and-forget service that will greatly improve four key
+          elements of your site. Namely, performance, scalability, security, and
+          sustainability.
+        </p>
+        <a
+          href="#"
+          class="self-start mt-6 text-sm font-medium text-black bg-gray-100 btn"
+        >
+          Read more
+        </a>
+      </div>
+    </section>
+
+    <section class="grid bg-white">
+      <div class="container flex flex-col py-8 xl:px-32 sm:py-28"></div>
+        <h1
+          class="self-start px-3 py-1 text-xs font-medium text-white bg-black rounded-2xl"
+        >
+          Support by Experts
+        </h1>
+        <h2 class="pt-6 text-2xl font-medium md:text-4xl">
+          We are here for you when you need us
+        </h2>
+        <div class="flex flex-col md:flex-row">
+          <span class="pt-8 md:flex-1 md:pt-16">
+            <img
+              class="grid-img"
+              alt="A smiling customer"
+              src="https://servebolt.com/cdn-cgi/image/quality=60,format=auto,onerror=redirect,width=/content/uploads/2019/03/Icon_Customer.svg"
+            />
+            <h4 class="pt-4 text-sm font-medium">When you need us</h4>
+            <p class="pt-4 text-sm">
+              Our support team of experts is available by phone, chat and email.
+            </p>
+          </span>
+
+          <span class="pt-8 md:flex-1 md:pt-16">
+            <img
+              class="grid-img"
+              alt="A icon illustrating a moon and clouds"
+              src="https://servebolt.com/cdn-cgi/image/quality=60,format=auto,onerror=redirect,width=/content/uploads/2019/03/Icon_Sleep.svg"
+            />
+            <h4 class="pt-4 text-sm font-medium">When you do not need us</h4>
+            <p class="pt-4 text-sm">
+              Our OPS team monitors our cloud's health 24/7/365 and makes sure
+              everything runs smoothly, so that you don't have to think about
+              it.
+            </p>
+          </span>
+
+          <span class="pt-8 md:flex-1 md:pt-16">
+            <img
+              class="grid-img"
+              alt="Icon speedometer"
+              src="https://servebolt.com/cdn-cgi/image/quality=60,format=auto,onerror=redirect,width=/content/uploads/2019/03/Icon_Speed.svg"
+            />
+            <h4 class="pt-4 text-sm font-medium">When you want to improve</h4>
+            <p class="pt-4 text-sm">
+              Our web performance experts can provide you with qualified
+              insights into how your unique WordPress site can become faster.
+            </p>
+          </span>
+        </div>
+
+        <span class="pt-8 md:pt-12">
+          <p class="font-medium">99.9% uptime guarantee SLA always included</p>
+          <p>
+            Check out
+            <a href="#" class="pt-1 text-blue-500 underline"
+              >our uptime for the last 30 days</a
+            >.
+          </p>
+        </span>
+      </div>
+    </section>
+
+    <section class="billboard">
+      <div class="container flex flex-col py-8 xl:px-32 sm:py-28">
+        <img class="illustration-small" alt="" src="https://servebolt.com/cdn-cgi/image/quality=60,format=auto,onerror=redirect,width=126/content/uploads/2020/07/pin-uk.png">
+        <h1>Hello, London!</h1>
+        <p>
+          Servebolt Cloud will in August 2020 have a new location in production. It's time for UK to get extreme performance hosting locally.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-96"></section>
   </body>
 </html>
