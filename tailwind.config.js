@@ -8,7 +8,10 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1.25rem",
+        md: "2rem",
+      },
     },
     screens: {
       xs: "420px",
@@ -59,9 +62,6 @@ module.exports = {
           },
           "@screen xl": {
             maxWidth: "1280px",
-          },
-          "@screen 2xl": {
-            maxWidth: "1480px",
           },
         },
       });

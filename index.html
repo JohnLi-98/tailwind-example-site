@@ -95,7 +95,7 @@
             Login
           </button>
           <button
-            class="self-start ml-1 font-sans text-sm font-medium bg-yellow-500 xs:hidden lg:block btn btn-lg hover:text-white"
+            class="self-start ml-1 font-sans text-sm font-medium bg-yellow-500 xs:hidden sm:block btn btn-lg hover:text-white"
           >
             Sign-up
           </button>
@@ -111,14 +111,16 @@
         </div>
       </div>
     </header>
-    <section class="pt-52 hero">
+    <section class="pt-44 sm:pt-52 hero">
       <div
-        class="container flex flex-col items-center justify-between pb-8 md:flex-row xl:px-32 sm:pb-28"
+        class="container flex flex-col items-center justify-between pb-8 md:flex-row sm:pb-28"
       >
-        <div class="flex-col lg:flex content">
-          <span>FULLY MANAGED</span>
+        <div
+          class="flex flex-col w-full md:w-6/12 lg:w-7/12 content 2xl:pr-20 lg:pr-12"
+        >
+          <span class="text-sm tracking-widest">FULLY MANAGED</span>
           <h1
-            class="pt-4 pb-8 text-2xl font-semibold tracking-wider lg:text-4xl"
+            class="pt-4 pb-8 text-3xl font-semibold leading-snug tracking-wider xs:text-4xl lg:leading-tight lg:text-5xl"
           >
             Amazingly fast hosting
           </h1>
@@ -130,40 +132,55 @@
             Migrate to Servebolt, or just try it for free, and experience
             loading speeds you have never seen before.
           </p>
-          <div class="flex flex-col items-start pt-8 lg:flex-row button-group">
-            <a href="#" class="font-medium btn btn-primary">
+          <div
+            class="flex flex-col items-start pt-8 sm:flex-row md:flex-col lg:flex-row sm:items-center md:items-start lg:items-center button-group"
+          >
+            <a
+              href="#"
+              class="px-8 py-4 font-medium text-white rounded-md bg-gradient-to-r from-blue-700 to-blue-500"
+            >
               Why is Servebolt faster?
             </a>
-            <a href="#" class="btn btn-textonly"> Why performance matters </a>
+            <a href="#" class="pl-6 mt-4 md:mt-4 lg:mt-0 sm:mt-0">
+              Why performance matters
+            </a>
           </div>
         </div>
 
-        <div class="flex-col items-start p-16 bg-white lg:flex trial">
-          <h4 class="text-2xl tracking-wide">
-            Test our hosting yourself, for free
-          </h4>
-          <ul class="py-10 list-outside check">
-            <li>100% managed hosting</li>
-            <li>Extremely fast & lightweight</li>
-            <li>Experts on support</li>
-            <li>Free migrations</li>
-            <li>Powerful features</li>
-          </ul>
-          <a href="#" class="flex flex-shrink-0 font-medium btn btn-primary"
-            >Start free trial</a
-          >
+        <div
+          class="flex flex-col w-full pl-0 mt-8 md:mt-0 md:pl-12 md:w-6/12 lg:w-5/12 trial"
+        >
+          <div class="p-8 bg-white rounded-lg shadow-sm lg:p-12">
+            <h4 class="mb-6 text-2xl leading-normal tracking-wide">
+              Test our hosting yourself, for free
+            </h4>
+            <ul class="mb-6 leading-loose list-outside check">
+              <li>100% managed hosting</li>
+              <li>Extremely fast & lightweight</li>
+              <li>Experts on support</li>
+              <li>Free migrations</li>
+              <li>Powerful features</li>
+            </ul>
+            <a
+              href="#"
+              class="self-start font-medium md:flex md:flex-shrink-0 btn btn-primary"
+              >Start free trial</a
+            >
+          </div>
         </div>
       </div>
     </section>
 
     <section class="bg-white billboard">
-      <div class="container flex flex-col py-8 xl:px-32 sm:py-28">
+      <div class="container flex flex-col py-8 sm:py-28">
         <img
-          class="illustration-full"
+          class="max-w-screen-md mx-auto illustration-full"
           alt=""
           src="https://servebolt.com/cdn-cgi/image/quality=60,format=auto,onerror=redirect,width=/content/uploads/2019/02/dont_bring_a_truck_to_a_dragrace.svg"
         />
-        <h1 class="pt-8 pb-8 text-2xl font-semibold tracking-wider md:text-4xl">
+        <h1
+          class="mt-12 mb-8 text-2xl font-semibold tracking-wider md:text-4xl"
+        >
           Blazingly fast hosting without complexity
         </h1>
         <p class="text-xl md:text-3xl">Modern, slimmed down and tuned</p>
@@ -184,7 +201,7 @@
     </section>
 
     <section class="special">
-      <div class="container flex flex-col items-center py-8 xl:px-32 sm:py-28">
+      <div class="container flex flex-col items-center py-8 sm:py-28">
         <h1 class="pb-10 text-xl">No matter the number of</h1>
         <span>
           <img
@@ -201,7 +218,7 @@
     <section
       class="text-white billboard bg-gradient-to-bl from-blue-700 to-blue-500"
     >
-      <div class="container flex flex-col py-8 xl:px-32 sm:py-28">
+      <div class="container flex flex-col py-8 sm:py-28">
         <img
           class="illustration-small"
           alt=""
@@ -232,7 +249,7 @@
     </section>
 
     <section class="grid bg-white">
-      <div class="container flex flex-col py-8 xl:px-32 sm:py-28"></div>
+      <div class="container flex flex-col py-8 sm:py-28">
         <h1
           class="self-start px-3 py-1 text-xs font-medium text-white bg-black rounded-2xl"
         >
@@ -242,7 +259,7 @@
           We are here for you when you need us
         </h2>
         <div class="flex flex-col md:flex-row">
-          <span class="pt-8 md:flex-1 md:pt-16">
+          <div class="px-6 pt-8 md:flex-1 md:pt-16">
             <img
               class="grid-img"
               alt="A smiling customer"
@@ -252,9 +269,9 @@
             <p class="pt-4 text-sm">
               Our support team of experts is available by phone, chat and email.
             </p>
-          </span>
+          </div>
 
-          <span class="pt-8 md:flex-1 md:pt-16">
+          <div class="px-6 pt-8 md:flex-1 md:pt-16">
             <img
               class="grid-img"
               alt="A icon illustrating a moon and clouds"
@@ -266,9 +283,9 @@
               everything runs smoothly, so that you don't have to think about
               it.
             </p>
-          </span>
+          </div>
 
-          <span class="pt-8 md:flex-1 md:pt-16">
+          <div class="px-6 pt-8 md:flex-1 md:pt-16">
             <img
               class="grid-img"
               alt="Icon speedometer"
@@ -279,7 +296,7 @@
               Our web performance experts can provide you with qualified
               insights into how your unique WordPress site can become faster.
             </p>
-          </span>
+          </div>
         </div>
 
         <span class="pt-8 md:pt-12">
@@ -295,12 +312,21 @@
     </section>
 
     <section class="billboard">
-      <div class="container flex flex-col py-8 xl:px-32 sm:py-28">
-        <img class="illustration-small" alt="" src="https://servebolt.com/cdn-cgi/image/quality=60,format=auto,onerror=redirect,width=126/content/uploads/2020/07/pin-uk.png">
-        <h1>Hello, London!</h1>
-        <p>
-          Servebolt Cloud will in August 2020 have a new location in production. It's time for UK to get extreme performance hosting locally.
+      <div class="container flex flex-col items-start py-8 sm:py-28">
+        <img
+          class="self-center illustration-small"
+          alt=""
+          src="https://servebolt.com/cdn-cgi/image/quality=60,format=auto,onerror=redirect,width=126/content/uploads/2020/07/pin-uk.png"
+        />
+        <h1 class="pt-8 text-3xl font-medium">Hello, London!</h1>
+        <p class="pt-8">
+          Servebolt Cloud will in August 2020 have a new location in production.
+          It's time for UK to get extreme performance hosting locally.
         </p>
+
+        <a href="#" class="mt-8 text-sm font-medium btn btn-primary">
+          Read more about the launch
+        </a>
       </div>
     </section>
 

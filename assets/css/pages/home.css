@@ -4,16 +4,16 @@ can take advantage of tailwind css utility classes by using the keyword '@apply'
 by the utility name of the style that you want to apply.
 */
 
-* {
+/* * {
   font-size: large;
-}
+} */
 
 .btn {
   @apply px-4 py-2 rounded appearance-none;
 }
 
 .btn-primary {
-  @apply px-10 py-5 text-white bg-gradient-to-r from-blue-700 to-blue-500;
+  @apply px-8 py-4 text-white bg-gradient-to-r from-blue-700 to-blue-500;
 }
 
 .btn-textonly {
